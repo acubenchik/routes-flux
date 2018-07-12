@@ -40,9 +40,9 @@ public class ImageHandler {
                         return ServerResponse.ok().cacheControl(CacheControl.maxAge(1, TimeUnit.DAYS)).
                                 contentType(APPLICATION_JSON).body(fromObject(jsonMap));
                     }).switchIfEmpty(notFoundDefault);
+            return image;
         } catch (IOException e) {
             return notFoundDefault;
         }
-        return image;
     }
 }

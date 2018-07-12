@@ -16,15 +16,4 @@ public class ImageService implements IImageService {
         File file = new ClassPathResource(id + ".jpeg").getFile();
         return Base64.getEncoder().withoutPadding().encodeToString(Files.readAllBytes(file.toPath()));
     }
-
-    public String getDefaultImage(String id) {
-        File file = null;
-        try {
-            file = new ClassPathResource("default.jpeg").getFile();
-            return Base64.getEncoder().withoutPadding().encodeToString(Files.readAllBytes(file.toPath()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 }
