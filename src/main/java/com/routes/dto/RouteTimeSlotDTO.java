@@ -13,5 +13,6 @@ public class RouteTimeSlotDTO {
 
     private long id;
     private LocalDateTime availableDate;
+    private LocalDateTime endDate;
     private GuideDTO guide;
 }

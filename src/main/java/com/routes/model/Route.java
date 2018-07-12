@@ -16,6 +16,9 @@ public class Route extends AbstractRoute {
     private String length;
     @Column(length = 1000)
     private String description;
+
+    private String price;
+
     @OneToMany(mappedBy = "route", fetch = FetchType.EAGER)
 //    @Fetch(FetchMode.JOIN) // ignored by spring
     private List<RouteTimeSlot> slots;

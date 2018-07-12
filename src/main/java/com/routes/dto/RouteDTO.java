@@ -12,6 +12,7 @@ public class RouteDTO {
 
     private long id;
     private String length;
+    private String price;
     private String description;
     private List<RouteTimeSlotDTO> slots;
 

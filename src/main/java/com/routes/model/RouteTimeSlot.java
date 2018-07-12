@@ -26,4 +26,7 @@ public class RouteTimeSlot {
     @Column
     private LocalDateTime availableDate;
 
+    @Column
+    private LocalDateTime endDate;
+
 }
