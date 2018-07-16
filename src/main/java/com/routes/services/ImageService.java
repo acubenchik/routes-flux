@@ -15,7 +15,7 @@ public class ImageService implements IImageService {
 
     @Override
     public String getImage(String id) throws IOException {
-        InputStream file = getClass().getResourceAsStream(id);
+        InputStream file = getClass().getResourceAsStream("/" + id);
         return Base64.getEncoder().withoutPadding().encodeToString(IOUtils.toByteArray(file));
     }
 
