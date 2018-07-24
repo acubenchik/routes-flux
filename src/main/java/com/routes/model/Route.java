@@ -2,6 +2,7 @@ package com.routes.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,7 +15,8 @@ import java.util.List;
 public class Route extends AbstractRoute {
 
     private String length;
-    @Column(length = 1000)
+    @Column(length = 5000)
+    @Type(type="text")
     private String description;
 
     private String price;
